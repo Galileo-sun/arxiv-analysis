@@ -22,3 +22,4 @@ jobs:
       - name: run scripts
         run: |
           python scripts/run-mail.py ${{ secrets.CONFIG_URL }} ${{ secrets.EMAIL }} ${{ secrets.EMAIL_PASS }}
+
