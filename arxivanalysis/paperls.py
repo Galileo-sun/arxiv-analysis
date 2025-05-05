@@ -198,7 +198,7 @@ def new_submission(url, mode=1, samedate=False):
         date_filter = re.compile(r"^Showing new listings for ([a-zA-Z]+), .*")
         try:
             print(so("h3")[0])
-            weekdaystr = date_filter.match(so("h3")[0].string).group(1)
+            weekdaystr = date_filter.match(so("h3")[0].get_text()).group(1)
         except AttributeError:
             return []
         if weekdaylist[datetime.today().weekday()] != weekdaystr[:3]:
